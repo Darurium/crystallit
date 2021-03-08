@@ -115,26 +115,77 @@ links.forEach(link => {
     });
 });
 
+const calc = () => {
 
-// services
+	const cards = document.querySelectorAll('.popup_calc__card'),
+		  colorBtn = document.querySelectorAll('.popup_calc__item'),
+		  surFaceBtn = document.querySelectorAll('.popup_calc__surface__button');
 
-const getResource = async (url) => {
-	let res = await fetch(url);
-
-	if (!res.ok) {
-		throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+	function hideCards () {
+		cards.forEach(item => {
+			item.style.display = 'none';
+			// item.classList.remove('popup_calc__card_active');
+		});		
 	}
 
-	return await res.json();
-};
+	function showCard (color='white', surface='gl', i=0) {
+		cards.forEach(item => {
+			if (item.dataset.color == color && item.dataset.surface == surface) {
+				item.style.display = 'block';
+			}
+		});
+		
+	}
 
-document.querySelector('.header__btn').addEventListener('click', () => {
-	getResource('http://localhost:3000/sills')
-		.then(res => console.log(res));
-});
+	hideCards();
+	showCard();
+	
 
-const createCard = (response) => {
-	response.forEach(item => {
-		let card;
+	colorBtn.forEach(item => {
+		item.addEventListener('click', () => {
+			colorBtn.forEach(item => {
+				item.classList.remove('popup_calc__item_active');
+			});
+			item.classList.add('popup_calc__item_active');
+			let colorTrigger = document.querySelector('.popup_calc__item_active').getAttribute('data-color'),
+			surfaceTrigger = document.querySelector('.popup_calc__surface__button_active').getAttribute('data-surface');
+			console.log(colorTrigger, surfaceTrigger);
+			hideCards();
+			showCard(colorTrigger, surfaceTrigger);
+		});
 	});
+
+	surFaceBtn.forEach(item => {
+		item.addEventListener('click', () => {
+			surFaceBtn.forEach(item => {
+				item.classList.remove('popup_calc__surface__button_active');
+			});
+			item.classList.add('popup_calc__surface__button_active');
+			let colorTrigger = document.querySelector('.popup_calc__item_active').getAttribute('data-color'),
+			surfaceTrigger = document.querySelector('.popup_calc__surface__button_active').getAttribute('data-surface');
+			console.log(colorTrigger, surfaceTrigger);
+			hideCards();
+			showCard(colorTrigger, surfaceTrigger);
+		});
+	});	
 };
+
+calc();
+
+const cards = document.querySelectorAll('.popup_calc__card');
+
+cards.forEach(item => {
+	
+	item.addEventListener('click', (e) => {
+		let target = e.target;
+		
+		if (target.classList.contains('popup_calc__card') || 
+			target.parentNode.classList.contains('popup_calc__card') ||
+			target.parentNode.parentNode.classList.contains('popup_calc__card')) {
+				cards.forEach(item => {
+					item.classList.remove('popup_calc__card_active');
+				});
+				item.classList.add('popup_calc__card_active');
+			}
+	});
+});

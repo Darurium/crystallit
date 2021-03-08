@@ -451,41 +451,151 @@
                 <div class="popup_calc__title">Выберите цвет подоконников</div>
                 <div class="popup_calc__tabs">
                     <ul class="popup_calc__list">
-                        <li class="popup_calc__item popup_calc__item_active">
+                        <li class="popup_calc__item popup_calc__item_active"  data-color="white">
                             <div class="popup_calc__link">Белые</div>
                         </li>
-                        <li class="popup_calc__item">
+                        <li class="popup_calc__item"  data-color="stone">
                             <div class="popup_calc__link">Под камень</div>
                         </li>
-                        <li class="popup_calc__item">
+                        <li class="popup_calc__item"  data-color="wood">
                             <div class="popup_calc__link">Под дерево</div>
                         </li>
                     </ul>
                 </div>
                 <div class="popup_calc__surface">
                     <div class="popup_calc__surface__block">
-                        <button class="popup_calc__surface__button popup_calc__surface__button_active">Глянцевые</button>
+                        <button class="popup_calc__surface__button  popup_calc__surface__button_active" data-surface="gl">Глянцевые</button>
                     </div>
                     <div class="popup_calc__surface__block">
-                        <button class="popup_calc__surface__button">Матовые</button>
+                        <button class="popup_calc__surface__button" data-surface="mat">Матовые</button>
                     </div>                    
                 </div>
                 <div class="popup_calc__cards">
-                    <div class="popup_calc__cards_column">
-                        <div class="popup_calc__card popup_calc__card_active">
-                            <div class="popup_calc__card__img">
-                                <img src="img/popup_calc/header/header_zdGL.jpg" alt="кристаллит золотой дуб глянец">
-                            </div>
-                            <div class="popup_calc__card__name">Золотой дуб глянец</div>
+                    <div class="popup_calc__card" data-color="white" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_belGl.jpg" alt="Белый глянец">
                         </div>
+                        <div class="popup_calc__name">Белый глянец</div>
                     </div>
-                    <div class="popup_calc__cards_column">
-                        <div class="popup_calc__card">
-                            <div class="popup_calc__card__img">
-                                <img src="img/popup_calc/header/header_zdGL.jpg" alt="кристаллит золотой дуб глянец">
-                            </div>
-                            <div class="popup_calc__card__name">Золотой дуб глянец</div>
+                    <div class="popup_calc__card" data-color="white" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_belMat.jpg" alt="Белый матовый">
                         </div>
+                        <div class="popup_calc__name">Белый матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_vengeGl.jpg" alt="Венге глянец">
+                        </div>
+                        <div class="popup_calc__name">Венге глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_vengeMat.jpg" alt="Венге матовый">
+                        </div>
+                        <div class="popup_calc__name">Венге матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="white" data-surface="gl" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_satin.JPG" alt="Сатин">
+                        </div>
+                        <div class="popup_calc__name">Сатин</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="stone" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_bristolGl.jpg" alt="Бристол глянец">
+                        </div>
+                        <div class="popup_calc__name">Бристол глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="stone" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_bristolMat.JPG" alt="Бристол матовый">
+                        </div>
+                        <div class="popup_calc__name">Бристол матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="stone" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_mramorGl.jpg" alt="Мрамор глянец">
+                        </div>
+                        <div class="popup_calc__name">Мрамор глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="stone" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_mramorMat.JPG" alt="Мрамор матовый">
+                        </div>
+                        <div class="popup_calc__name">Мрамор матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="stone" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_palermoGl.JPG" alt="Палермо глянец">
+                        </div>
+                        <div class="popup_calc__name">Палермо глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="stone" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_palermoMat.JPG" alt="Палермо матовый">
+                        </div>
+                        <div class="popup_calc__name">Палермо матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_zdGL.jpg" alt="Золотой дуб глянец">
+                        </div>
+                        <div class="popup_calc__name">Золотой дуб глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_zdMat.jpg" alt="Золотой дуб матовый">
+                        </div>
+                        <div class="popup_calc__name">Золотой дуб матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_maxGl.JPG" alt="Махагон глянец">
+                        </div>
+                        <div class="popup_calc__name">Махагон глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_maxMat.JPG" alt="Махагон матовый">
+                        </div>
+                        <div class="popup_calc__name">Махагон матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_natdubGl.JPG" alt="Натуральный дуб глянец">
+                        </div>
+                        <div class="popup_calc__name">Натуральный дуб глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_natdubMat.JPG" alt="Натуральный дуб матовый">
+                        </div>
+                        <div class="popup_calc__name">Натуральный дуб матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_beldubGL.JPG" alt="Белый дуб глянец">
+                        </div>
+                        <div class="popup_calc__name">Белый дуб глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_beldubMat.JPG" alt="Белый дуб матовый">
+                        </div>
+                        <div class="popup_calc__name">Белый дуб матовый</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="gl">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_orehGl.JPG" alt="Орех глянец">
+                        </div>
+                        <div class="popup_calc__name">Орех глянец</div>
+                    </div>
+                    <div class="popup_calc__card" data-color="wood" data-surface="mat">
+                        <div class="popup_calc__img">
+                            <img src="img/popup_calc/header/header_orehMat.JPG" alt="Орех матовый">
+                        </div>
+                        <div class="popup_calc__name">Орех матовый</div>
                     </div>
                 </div>
                 
@@ -498,7 +608,6 @@
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
