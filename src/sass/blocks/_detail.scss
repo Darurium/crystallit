@@ -1,0 +1,117 @@
+.detail {
+    padding-top: 71px;
+    min-height: 590px;
+    background: url('../img/detail/pattern.png') 80% center / cover no-repeat;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+
+    &__card {
+        min-height: 560px;
+    }
+
+   
+
+    &__title {
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 31px;
+        color: #222;
+        margin: 0 auto;
+        margin-top: 39px;
+        text-align: center;
+        width: 300px;
+    }
+    &__subtitle {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #222;
+        margin-top: 21px;
+        text-align: center;
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}
+
+.flip-card {
+    width: 385px;
+    height: 385px;
+    perspective: 1000px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+    &:hover &-inner{
+        transform: rotateY(180deg);
+    }
+    
+}
+
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.flip-card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 80px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .5s ease;
+        z-index: 1;
+    }
+    &:hover {
+        &:after {
+            top: 50%;
+            background: url('../img/detail/link.png') center center / cover no-repeat;
+        }
+    }
+    
+}

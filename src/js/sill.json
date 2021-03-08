@@ -1,0 +1,40 @@
+{
+    "sills": [
+        {
+            "src": "img/popup_calc/header/header_belGl.jpg",
+            "color": "white",
+            "sirface": "Gl",
+            "name": "Белый глянец"
+        },
+        {
+            "src": "img/popup_calc/header/header_belMat.jpg",
+            "color": "white",
+            "sirface": "Mat",
+            "name": "Белый матовый"
+        },
+        {
+            "src": "img/popup_calc/header/header_vengeGl.jpg",
+            "color": "wood",
+            "sirface": "Gl",
+            "name": "Венге глянец"
+        },
+        {
+            "src": "img/popup_calc/header/header_vengeMat.jpg",
+            "color": "wood",
+            "sirface": "Mat",
+            "name": "Венге матовый"
+        },
+        {
+            "src": "img/popup_calc/header/header_zdGL.jpg",
+            "color": "wood",
+            "sirface": "Gl",
+            "name": "Золотой дуб глянец"
+        },
+        {
+            "src": "img/popup_calc/header/header_zdMat.jpg",
+            "color": "wood",
+            "sirface": "Mat",
+            "name": "Золотой дуб матовый"
+        }
+    ]
+}

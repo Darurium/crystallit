@@ -1,0 +1,183 @@
+.popup_calc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+        
+    }
+    &__content {
+        background-color: #fff;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        
+    }
+    &__header {
+        width: 600px;
+        height: 274px;
+        border-radius: 25px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+    }
+    &__title {
+        background-color: #fff;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        display: inline-block;
+        padding: 17px 25px;
+        font-weight: 700;
+        font-size: 24px;
+        position: absolute;
+        top: 237px;
+    }
+    &__tabs {
+        margin-top: 65px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 -35x;
+        margin-bottom: 0;
+    }
+    &__item {
+        padding: 10px 35px;
+        list-style-type: none;
+        cursor: pointer;       
+        
+    }
+    &__item_active {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: $main-color;
+            left: 0;
+            bottom: -3px;
+        }
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 18px;
+        position: relative;
+
+    }
+
+    &__surface {
+        margin: 0 -27px;
+        margin-top: 43px;
+        display: flex;
+        
+        &__block {
+            padding: 0 27px;
+        }
+        &__button {
+            width: 126px;
+            height: 32px;
+            background: #EFEFEF;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-weight: 400;
+            font-size: 14px;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+            &_active {
+                background: $main-color;
+                color: #FCFCFC;
+                border: none;
+                outline: none;
+
+            }
+        }
+    }
+
+    &__cards {
+        // width: 463px;
+        margin: 0 -20px;
+        margin-top: 51px;
+        display: flex;
+        &_column {
+            flex: 0 1 50%;
+            padding: 0 20px;
+        }
+    }
+    &__card {
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+        height: 100%;
+        &__img {
+            width: 211px;
+            height: 203px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__name {
+            margin: 10px 0;
+            font-weight: 300;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &_active {
+            box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.6));
+            border: 1px solid #C5C5C5;
+        }
+        
+    }
+
+    &__btn {
+        margin-top: 77px;
+        width: 195px;
+        height: 56px;
+        background-color: $main-color;
+        border-radius: 10px;
+        color: #FCFCFC;
+        font-weight: normal;
+        font-size: 24px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        margin-bottom: 42px;
+    }
+
+    &__close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0px;
+        right: -60px;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}

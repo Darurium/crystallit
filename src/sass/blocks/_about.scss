@@ -1,0 +1,44 @@
+.about {
+    min-height: 336px;
+    padding: 72px 0 42px 0;
+    &__about {
+        font-family: "Open Sans";
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        color: $main-color;
+    }
+    &__wrapper {
+        margin-top: 23px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    &__title {
+        width: 482px;
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 48px;
+        color: #222222;
+    }
+    &__descr {
+        width: 586px;
+    }
+    &__text1 {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #222;
+    }
+    &__text2 {
+        margin-top: 12px;
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        color: #222;
+    }
+}

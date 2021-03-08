@@ -1,0 +1,155 @@
+.promo {
+    background: url('../img/header/header_bg.jpg') 30% 30% / cover no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.header {
+    min-height: 604px;
+    padding-top: 76px;
+    position: relative;
+    padding-bottom: 76px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-top: 109px;
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 60px;
+        color: #fff;
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        font-family: "Open Sans";
+        margin-top: 52px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        color: #fff;
+        margin-bottom: 0;
+    }
+    &__btn {
+        margin-top: 52px;
+        width: 250px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.11);
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #fff;
+        transition: all .3s;
+        outline: none;
+        &:hover {
+            border: 1px solid $main-color;
+            color: $main-color;
+        }
+    }
+    &__slider {
+        position: relative;
+        left: 38px;
+        width: 631px;
+        // background: rgba(47, 28, 22, 0.17);
+        // backdrop-filter: blur(10px);
+        padding-top: 30px;
+        .slick-list {
+            overflow: hidden;
+        }
+        .slick-track{
+            display: flex;
+            margin-left: 10px;
+        }
+        .slick-slide{
+            outline: none;
+        }
+        .slick-arrow {
+            position: absolute;
+            bottom: -62px;
+            left: 82px;;
+            font-size: 0;
+            width: 49px;
+            height: 49px;
+            border: none;
+            outline: none;
+            z-index: 15;
+        
+        }
+        .slick-prev{
+            background: url('../icons/slider-left.svg') 0 0 /100% no-repeat;
+            left: 12px;
+            transition: all 0.3s;
+            &:hover {
+                background: url('../icons/slider-left-hover.svg') 0 0 /100% no-repeat;
+            }
+        }
+        .slick-next{
+            background: url('../icons/slider-right.svg') 0 0 /100% no-repeat;
+            transition: all 0.3s;
+            &:hover {
+                background: url('../icons/slider-right-hover.svg') 0 0 /100% no-repeat;
+            }
+        }
+    }
+    &__slide {
+        width: 282px;
+        height: 475px;
+        margin-right: 20px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+            box-shadow: 0px 30px 12px rgba(0, 0, 0, 0.29);
+            border-radius: 3px;
+        }
+    }
+    &__socials {
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        width: 213px;
+        height: 60px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__whatsapp {
+        display: block;
+        background: url('../icons/whatsapp.png') center center / cover no-repeat;
+        width: 60px;
+        height: 60px;
+        transition: all .3s;
+        &:hover {
+            background: url('../icons/whatsapp-hover.png') center center / cover no-repeat;
+        }
+    }
+    &__instagram {
+        display: block;
+        background: url('../icons/instagram.png') center center / cover no-repeat;
+        width: 60px;
+        height: 60px;
+        transition: all .3s;
+        &:hover {
+            background: url('../icons/instagram-hover.png') center center / cover no-repeat;
+        }
+    }
+
+    &__vk {
+        display: block;
+        background: url('../icons/vk.png') center center / cover no-repeat;
+        width: 60px;
+        height: 60px;
+        transition: all .3s;
+        &:hover {
+            background: url('../icons/vk-hover.png') center center / cover no-repeat;
+        }
+    }
+
+}
+

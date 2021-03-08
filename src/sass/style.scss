@@ -1,0 +1,45 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import "base/variables";
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+
+.container {
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.divider {
+    width: 100px;
+    height: 4px;
+    background: $main-color;
+    margin: 0 auto;
+    margin-top: 21px;
+}
+
+
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/about";
+@import "blocks/detail";
+@import "blocks/choice";
+@import "blocks/advantages";
+@import "blocks/project";
+@import "blocks/reviews";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/menu";
+@import "blocks/popups";
+
+@import "blocks/media";

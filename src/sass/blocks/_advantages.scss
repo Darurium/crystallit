@@ -1,0 +1,86 @@
+.advantages {
+    min-height: 1200px;
+    padding-top: 70px;
+    // background: url('../img/advantages/pattern.png') center center /  repeat;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        &_2 {
+            margin-top: 100px;
+        }
+    }
+    &__title {
+        width: 385px;
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 44px;
+        color: #222222;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: $main-color;
+            top: 20px;
+            left: -77px;
+        }
+    }
+    &__descr {
+        position: absolute;
+        width: 525px;
+        height: 213px;
+        padding: 44px 59px;
+        background: #fff;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+        &_1 {
+            top: 120px;
+        }
+        &_2 {
+            right: 0;
+            top: 120px;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        margin-bottom: 0;
+    }
+    &__item {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #222222;
+        position: relative;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: $main-color;
+            left: -20px;
+            top: 8px;
+            
+        }
+        &:hover {
+            
+            &:before {
+                border: 1px solid ;
+            }
+        }
+    }
+    &__img {
+        width: 684px;
+        height: 468px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
