@@ -67,13 +67,21 @@ const modals = (triggerSelector, modalSelector, closeSelector) => {
 
 	const trigger = document.querySelectorAll(triggerSelector),
 		  modal = document.querySelector(modalSelector),
-		  close = document.querySelector(closeSelector);
+		  close = document.querySelector(closeSelector),
+		  windows = document.querySelectorAll('[data-modal]');
 
 	trigger.forEach(item => {
 		item.addEventListener('click', () => {
+			windows.forEach(item => {
+				item.style.display = 'none';
+			});
+
 			modal.style.display = 'block';
 			document.body.style.overflow = "hidden";
+
+			
 		});
+
 	});
 
 	close.addEventListener('click', () => {
@@ -91,6 +99,7 @@ const modals = (triggerSelector, modalSelector, closeSelector) => {
 };
 
 modals('.header__btn', '.popup_calc', '.popup_calc__close');
+modals('.popup_calc__btn', '.popup_size', '.popup_size__close');
 
 
 
@@ -188,4 +197,12 @@ cards.forEach(item => {
 				item.classList.add('popup_calc__card_active');
 			}
 	});
+});
+
+// inputs
+
+document.querySelector('.popup_size__width-range').addEventListener('input', () => {
+	let val = document.querySelector('.popup_size__width-range').value;
+	document.querySelector('.popup_size__width-value').innerHTML = val + ' мм';
+	document.querySelector('.popup_size__width-value').style.left = val - 107 + 'px';
 });

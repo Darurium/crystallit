@@ -438,7 +438,7 @@
         </div>
     </div> 
 
-    <div class="popup_calc">
+    <div class="popup_calc" data-modal>
         <div class="popup_calc__body">
             <div class="popup_calc__content">
                <div class="popup_calc__close">
@@ -600,6 +600,37 @@
                 </div>
                 
                 <button class="popup_calc__btn">Далее</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup_size" data-modal>
+        <div class="popup_size__body">
+            <div class="popup_size__content">
+                <div class="popup_size__close">
+                    <img src="img/popup_calc/gg_close-o.png" alt="">
+                </div>
+                <div class="popup_calc__header">
+                    <img src="img/popup_calc/header/header_belGl.jpg" alt="кристаллит золотой дуб глянец">
+                </div>
+                <div class="popup_calc__title">Введите размер подоконников</div>
+                
+                <div class="popup_size__sills">
+                    <div class="popup_size__sill">
+                        <div class="popup_size__text-width">Выберите ширину подоконника</div>
+                        <div class="popup_size__width">                            
+                            <div class="popup_size__width-value">100 мм</div>
+                            <input type="range" class="popup_size__width-range" min="100" max="600" value="100" step="50" id="width">
+                        </div>
+                        <div class="popup_size__length">
+                            <div class="popup_size__length-value">                            
+                                <input type="number" class="popup_size__length-range" value="500" id="length">
+                            </div>
+                            <div class="popup_size__text-length">Введите длину подоконника</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="popup_size__btn">Далее</button>          
             </div>
         </div>
     </div>
