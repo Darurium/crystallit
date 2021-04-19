@@ -1,5 +1,6 @@
 .choise {
     min-height: 760px;
+    margin-top: 40px;
     // background: url('../img/choise/Group 7.jpg') center center / cover no-repeat;
     &__wrapper {
         display: flex;;
@@ -8,7 +9,8 @@
     &__left {
        
         width: 40%;
-        background: url('../img/choise/leftColumn.png') 50% 50% / cover no-repeat;
+        // background: url('../img/choise/leftColumn.png') 50% 50% / cover no-repeat;
+        background: url('../img/choise/left.jpg') 50% 50% / cover no-repeat;
         background-attachment: fixed;
         display: flex;
         flex-direction: column;
@@ -31,7 +33,7 @@
         width: 380px;
         font-family: "Open Sans";
         font-weight: 400;
-        font-size: 14px;
+        font-size: 22px;
         line-height: 32px;
         color: #222222;
         margin-top: 33px;

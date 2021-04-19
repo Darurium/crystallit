@@ -3,7 +3,7 @@ $(function() {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 3000,
         responsive: [{
               breakpoint: 992,
@@ -13,7 +13,7 @@ $(function() {
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 740,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
