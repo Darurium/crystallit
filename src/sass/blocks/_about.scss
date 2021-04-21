@@ -4,7 +4,7 @@
     &__about {
         font-family: "Open Sans";
         font-weight: bold;
-        font-size: 18px;
+        font-size: 36px;
         line-height: 25px;
         color: $main-color;
     }
@@ -30,7 +30,7 @@
         font-family: "Open Sans";
         font-weight: 400;
         font-size: 22px;
-        line-height: 26px;
+        line-height: 32px;
         color: #222;
     }
     &__text2 {
@@ -38,7 +38,10 @@
         font-family: "Open Sans";
         font-weight: 400;
         font-size: 24px;
-        line-height: 28px;
+        line-height: 32px;
         color: #222;
+    }
+    &__divider {
+        margin-top: 40px;
     }
 }

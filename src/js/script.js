@@ -100,6 +100,7 @@ const modals = (triggerSelector, modalSelector, closeSelector) => {
 
 modals('.header__btn', '.popup_calc', '.popup_calc__close');
 modals('.popup_calc__btn', '.popup_size', '.popup_size__close');
+modals('.gallery__wrapper', '.popup_gallery', '.popup_gallery__close');
 
 
 
@@ -206,3 +207,72 @@ document.querySelector('.popup_size__width-range').addEventListener('input', () 
 	document.querySelector('.popup_size__width-value').innerHTML = val + ' мм';
 	document.querySelector('.popup_size__width-value').style.left = val - 107 + 'px';
 });
+
+
+// tabs
+
+const tabs = document.querySelector(".gallery__tabs"),
+	  tab = document.querySelectorAll(".gallery__tab"),
+	  content = document.querySelectorAll(".gallery__item");
+
+function hideTabContent() {
+	content.forEach(item => {
+		item.style.display = 'none';
+	});
+	tab.forEach(item => {
+		item.classList.remove("gallery__tab_active");
+	});
+}
+
+function showTabContent(data = "white") {
+	content.forEach(item => {
+		if (item.dataset.color === data) {
+			item.style.display = "block";
+		}
+	})
+	tab.forEach(item => {
+		if (item.dataset.color === data) {
+			item.classList.add("gallery__tab_active")
+		}
+	})
+}
+
+hideTabContent();
+showTabContent();
+
+tabs.addEventListener('click', (e) => {
+	const target = e.target;
+	if (target.classList.contains("gallery__tab") || 
+		target.parentNode.classList.contains("gallery__tab")) { 
+			tab.forEach(item => {
+				if (target == item || target.parentNode == item) {
+					hideTabContent();
+					showTabContent(target.getAttribute("data-color"));
+				}
+			});
+	}
+});
+
+// Gallery modal
+
+const bigImgDiv = document.createElement("div"),
+	  bigImg = document.createElement("img"),
+	  modal = document.querySelector(".popup_gallery__content"),
+	  wrapper = document.querySelector(".gallery__wrapper"),
+	  gallery = document.querySelector(".popup_gallery");
+
+bigImgDiv.classList.add("gallery__bigimg");
+bigImgDiv.appendChild(bigImg);
+modal.appendChild(bigImgDiv);
+
+wrapper.addEventListener("click", (e) => {
+	e.preventDefault();
+	let target = e.target;
+
+	if(target && target.parentNode.classList.contains("gallery__item")) {
+		gallery.style.display = "block";
+		const path = target.parentNode.getAttribute("href");
+		bigImg.setAttribute("src", path);
+	}
+	
+})
