@@ -20,11 +20,11 @@
             </div>
             <nav class="menu__nav">
                 <ul class="menu__list">
-                    <div class="menu__item"><a href="#advantages" class="menu__link">Кристаллит</a></div>
-                    <div class="menu__item"><a href="#" class="menu__link">Преимущества</a></div>
-                    <div class="menu__item"><a href="#" class="menu__link">Услуги</a></div>
-                    <div class="menu__item"><a href="#" class="menu__link">Галерея</a></div>
-                    <div class="menu__item"><a href="#" class="menu__link">Контакты</a></div>
+                    <div class="menu__item"><a href="#" class="menu__link">Кристаллит</a></div>
+                    <div class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></div>
+                    <!-- <div class="menu__item"><a href="#" class="menu__link">Услуги</a></div> -->
+                    <div class="menu__item"><a href="#gallery" class="menu__link">Галерея</a></div>
+                    <div class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></div>
                 </ul>
             </nav>
         </div>
@@ -41,10 +41,10 @@
                     <div class="nav__menu">
                         <ul class="nav__list">
                             <li class="nav__item"><a href="#" class="nav__link">Кристаллит</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Преимущества</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                            <li class="nav__item"><a href="#advantages" class="nav__link">Преимущества</a></li>
+                            <!-- <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li> -->
+                            <li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
+                            <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
                         </ul>
                     </div>
                     <div class="hamburger">
@@ -124,7 +124,7 @@
                             </div>
                             <div class="flip-card-back">
                                 <img src="img/detail/collection-back.jpg" alt="цвета подоконник кристаллит">
-                                <div class="detail__overlay"><a href="#"></a></div>
+                                <div class="detail__overlay"><a href="#gallery"></a></div>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                             </div>
                             <div class="flip-card-back">
                                 <img src="img/detail/plant-back.jpg" alt="цвета подоконник кристаллит">
-                                <div class="detail__overlay"><a href="#"></a></div>
+                                <div class="detail__overlay"><a href="#advantages"></a></div>
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                             </div>
                             <div class="flip-card-back">
                                 <img src="img/detail/time-back.jpg" alt="Гарантия на  подоконник кристаллит">
-                                <div class="detail__overlay"><a href="#"></a></div>
+                                <div class="detail__overlay"><a href="#advantages"></a></div>
                             </div>
                         </div>
                     </div>
@@ -207,21 +207,21 @@
                         <div class="choise__slide">
                             <img src="img/choise/slider/light.jpg" alt="Белые подоконники">
                             <div class="choise__slide__descr">
-                                <a href="#">Светлые цвета</a>
+                                <a href="#gallery">Светлые цвета</a>
                                 <div class="divider"></div>
                             </div>
                         </div>
                         <div class="choise__slide">
                             <img src="img/choise/slider/wooden.jpg" alt="Под дерево">
                             <div class="choise__slide__descr">
-                                <a href="#">Под дерево</a>
+                                <a href="#gallery">Под дерево</a>
                                 <div class="divider"></div>
                             </div>
                         </div>
                         <div class="choise__slide">
                             <img src="img/choise/slider/stone.jpg" alt="Под камень">
                             <div class="choise__slide__descr">
-                                <a href="#">Под камень</a>
+                                <a href="#gallery">Под камень</a>
                                 <div class="divider"></div>
                             </div>
                         </div>
@@ -252,7 +252,7 @@
         
     </section>
     
-    <section class="advantages">
+    <section class="advantages"  id="advantages">
         <div class="container">
             <div class="advantages__block">
                 <div class="advantages__text">
@@ -289,85 +289,208 @@
         </div>
     </section>
     
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="gallery__title">Галерея</h2>
             <div class="gallery__header">
                 <div class="gallery__text">Подоконники Crystallit - это качество премиум класса и самый широкий выбор декоров</div>
                 <div class="gallery__descr">Линейка подоконников Кристаллит представлена широким выбором цветовой гаммы на любой вкус. Это белые цвета, имитации под камень и дерево. </div>
             </div>
-            <div class="divider gallery__divider"></div>
             <div class="gallery__tabs">
                 <div class="gallery__tab gallery__tab_active" data-color="white">Белые</div>
                 <div class="gallery__tab" data-color="stone">Под камень</div>
                 <div class="gallery__tab" data-color="wood">Под дерево</div>
             </div>
             <div class="gallery__wrapper">
-                <div  class="gallery__item" data-color="white">
-                    <a href="img/popup_calc/header/header_belMat.jpg" class="gallery__img">
+                <div  class="gallery__item" data-color="white" data-img="belMat.jpg">
+                    <div class="gallery__img">
                         <img src="img/gallery/small/beliy_mat.jpg" alt="">
-                    </a>
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Белый матовый</h4>
+                    </div>
                 </div>
-                <a href="img/popup_calc/header/header_belGl.jpg" class="gallery__item" data-color="white">
-                    <img src="img/gallery/small/belyi_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_satin.JPG" class="gallery__item" data-color="white">
-                    <img src="img/gallery/small/beliy_satin.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_beldubGL.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/belyi_dub_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_beldubMat.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/belyi_dub_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_bristolMat.JPG" class="gallery__item" data-color="stone">
-                    <img src="img/gallery/small/bristol_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_bristolGl.jpg" class="gallery__item" data-color="stone">
-                    <img src="img/gallery/small/bristol_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_natdubMat.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/dub_nat_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_natdubGl.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small//dub_nat_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_maxMat.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/mahogon_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_maxGl.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small//mahogon_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_mramorMat.JPG" class="gallery__item" data-color="stone">
-                    <img src="img/gallery/small/mramor_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_mramorGl.jpg" class="gallery__item" data-color="stone">
-                    <img src="img/gallery/small/mramor_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_orehMat.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/oreh.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_orehGl.JPG" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/oreh_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_palermoMat.JPG" class="gallery__item" data-color="stone">
-                    <img src="img/gallery/small/palermo_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_palermoGl.JPG" class="gallery__item" data-color="stone">
-                    <img src="img/gallery/small/palermo_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_vengeMat.jpg" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/venge_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_vengeGl.jpg" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/venge_gl.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_zdMat.jpg" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/zolotoy_dub_mat.jpg" alt="">
-                </a>
-                <a href="img/popup_calc/header/header_zdGL.jpg" class="gallery__item" data-color="wood">
-                    <img src="img/gallery/small/zolotoy_dub_gl.jpg" alt="">
-                </a>
+                <div  class="gallery__item" data-color="white" data-img="belGl.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/belyi_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Белый глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="white" data-img="satin.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/beliy_satin.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Сатин</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="beldubGL.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/belyi_dub_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Белый дуб глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="beldubMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/belyi_dub_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Белый дуб матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="stone" data-img="bristolMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/bristol_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Бристол матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="stone" data-img="bristolGl.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/bristol_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Бристол глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="natdubMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/dub_nat_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Натуральный дуб матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="natdubGl.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/dub_nat_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Натуральный дуб глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="maxMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/mahogon_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Махагон матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="maxGl.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/mahogon_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Махагон глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="orehMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/oreh.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Орех матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="orehGl.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/oreh_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Орех глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="vengeMat.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/venge_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Венге матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="vengeGl.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/venge_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Венге глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="zdMat.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/zolotoy_dub_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Золотой дуб матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="wood" data-img="zdGL.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/zolotoy_dub_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Золотой дуб глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="stone" data-img="mramorMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/mramor_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Мрамор матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="stone" data-img="mramorGl.jpg">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/mramor_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Мрамор глянцевый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="stone" data-img="palermoMat.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/palermo_mat.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Палермо матовый</h4>
+                    </div>
+                </div>
+                <div  class="gallery__item" data-color="stone" data-img="palermoGl.JPG">
+                    <div class="gallery__img">
+                        <img src="img/gallery/small/palermo_gl.jpg" alt="">
+                    </div>
+                    <div class="gallery__description">
+                        <h3>Подоконник Кристаллит</h3>
+                        <h4>цвет Палермо глянцевый</h4>
+                    </div>
+                </div>
                 
             </div>        
         </div>
@@ -431,7 +554,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__descr">
@@ -456,10 +579,10 @@
                 <div class="footer__menu">
                     <ul class="footer__list">
                         <li class="footer__item"><a href="#" class="footer__link">Кристаллит</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Преимущества</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Услуги</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Галерея</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+                        <li class="footer__item"><a href="#advantages" class="footer__link">Преимущества</a></li>
+                        <!-- <li class="footer__item"><a href="#" class="footer__link">Услуги</a></li> -->
+                        <li class="footer__item"><a href="#gallery" class="footer__link">Галерея</a></li>
+                        <li class="footer__item"><a href="#contacts" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__contacts">
@@ -669,17 +792,78 @@
                 
                 <div class="popup_size__sills">
                     <div class="popup_size__sill">
-                        <div class="popup_size__text-width">Выберите ширину подоконника</div>
-                        <div class="popup_size__width">                            
-                            <div class="popup_size__width-value">100 мм</div>
-                            <input type="range" class="popup_size__width-range" min="100" max="600" value="100" step="50" id="width">
-                        </div>
-                        <div class="popup_size__length">
-                            <div class="popup_size__length-value">                            
-                                <input type="number" class="popup_size__length-range" value="500" id="length">
+                        <div class="popup_size__width-block">
+                            <div class="popup_size__text-width">Ширина: </div>
+                            <div class="popup_size__width">
+                                <input type="range" class="popup_size__width-range" min="100" max="600" value="100" step="50" id="width" name="width">                            
+                                <div class="popup_size__width-value">100 мм</div>                                
                             </div>
-                            <div class="popup_size__text-length">Введите длину подоконника</div>
                         </div>
+                        <div class="popup_size__block2">
+                            <div class="popup_size__length">                            
+                                <div class="popup_size__text-length">Длина: </div>
+                                <div class="popup_size__length-value">                            
+                                    <input type="number" class="popup_size__length-range" value="500" id="length" name="length">
+                                </div>
+                            </div>
+                            <div class="popup_size__quantity">
+                                <div class="popup_size__text-quantity">Количество: </div>
+                                <div class="popup_size__quantity-value">                            
+                                    <input type="number" class="popup_size__quantity-range" value="1" id="lquantity" name="quantity">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="popup_size__sill">
+                        <div class="popup_size__width-block">
+                            <div class="popup_size__text-width">Ширина: </div>
+                            <div class="popup_size__width">
+                                <input type="range" class="popup_size__width-range" min="100" max="600" value="100" step="50" id="width" name="width">                            
+                                <div class="popup_size__width-value">100 мм</div>
+                                
+                            </div>
+                        </div>
+                        <div class="popup_size__block2">
+                            <div class="popup_size__length">                            
+                                <div class="popup_size__text-length">Длина: </div>
+                                <div class="popup_size__length-value">                            
+                                    <input type="number" class="popup_size__length-range" value="500" id="length" name="length">
+                                </div>
+                            </div>
+                            <div class="popup_size__quantity">
+                                <div class="popup_size__text-quantity">Количество: </div>
+                                <div class="popup_size__quantity-value">                            
+                                    <input type="number" class="popup_size__quantity-range" value="1" id="lquantity" name="quantity">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="popup_size__sill">
+                        <div class="popup_size__width-block">
+                            <div class="popup_size__text-width">Ширина: </div>
+                            <div class="popup_size__width">
+                                <input type="range" class="popup_size__width-range" min="100" max="600" value="100" step="50" id="width" name="width">                            
+                                <div class="popup_size__width-value">100 мм</div>
+                                
+                            </div>
+                        </div>
+                        <div class="popup_size__block2">
+                            <div class="popup_size__length">                            
+                                <div class="popup_size__text-length">Длина: </div>
+                                <div class="popup_size__length-value">                            
+                                    <input type="number" class="popup_size__length-range" value="500" id="length" name="length">
+                                </div>
+                            </div>
+                            <div class="popup_size__quantity">
+                                <div class="popup_size__text-quantity">Количество: </div>
+                                <div class="popup_size__quantity-value">                            
+                                    <input type="number" class="popup_size__quantity-range" value="1" id="lquantity" name="quantity">
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <button class="popup_size__btn">Далее</button>          

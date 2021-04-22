@@ -1,6 +1,8 @@
 .reviews {
     min-height: 520px;
-    background-color: #777777;
+    // background-color: #777777;
+    background: url("../img/reviews/reviews-bg.jpg") center center / cover no-repeat;
+    background-attachment: fixed;
     padding-top: 57px;
     padding-bottom: 57px;
     &__slider {
@@ -74,8 +76,8 @@
         margin-top: 53px;
         font-family: "Open Sans";
         font-weight: 400;
-        font-size: 16px;
-        line-height: 27px;
+        font-size: 22px;
+        line-height: 32px;
         color: #fff;
     }
     &__author {

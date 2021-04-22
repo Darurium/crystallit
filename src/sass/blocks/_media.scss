@@ -99,6 +99,7 @@
     }
 
     .form {
+        padding-left: 0;
         &__wrapper {
             justify-content: center;
         }
@@ -387,10 +388,23 @@
         }
     }
     .whatsapp {
+        display: block;
         &__wrapper {
             width: 480px;
         }
         
+    }
+    .gallery {
+        &__tabs {
+            width: 500px;
+        }
+        &__tab {
+            font-size: 22px;
+            padding: 12px 18px;
+        }
+    }
+    .gallery__bigimg {
+        width: 400px;
     }
 }
 
@@ -435,11 +449,18 @@
     }
 
     .about {
+        padding-top: 40px;
         &__title {
             width: 100%;
+            font-size: 25px;
+            line-height: 38px;
         }
         &__descr {
             width: 100%;
+        }
+        &__text1, &__text2 {
+            font-size: 20px;
+            line-height: 30px;
         }
     }
 
@@ -456,6 +477,7 @@
         perspective: 1000px;
     }
     .advantages {
+        margin-top: 40px;
         &__descr {
             width: 300px;
             height: 330px;
@@ -482,6 +504,15 @@
         }
         &__galery {
             font-size: 12px;
+        }
+    }
+    .choise {
+        margin-top: 0;
+        &__title {
+            font-size: 26px;
+        }
+        &__descr {
+            font-size: 18px;
         }
     }
 
@@ -574,5 +605,44 @@
         &__btn {
             padding: 22px 41px;
         }
+    }
+    .gallery {
+        &__tabs {
+            width: 300px;
+        }
+        &__tab {
+            font-size: 14px;
+            padding: 4px 8px;
+        }
+        &__wrapper {
+            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, 300px);
+        }
+        &__img {
+            width: 300px;
+            height: 138px;
+        }
+        &__header {
+            flex-direction: column;
+
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 29px;
+            width: 100%;
+        }
+        &__descr {
+            width: 100%;
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 15px;
+        }
+    }
+    .gallery__bigimg {
+        width: 300px;
+    }
+    .popup_gallery__close {
+        top: 7px;
+        right: 7px;
     }
 }

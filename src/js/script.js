@@ -202,11 +202,19 @@ cards.forEach(item => {
 
 // inputs
 
-document.querySelector('.popup_size__width-range').addEventListener('input', () => {
-	let val = document.querySelector('.popup_size__width-range').value;
-	document.querySelector('.popup_size__width-value').innerHTML = val + ' мм';
-	document.querySelector('.popup_size__width-value').style.left = val - 107 + 'px';
-});
+document.querySelectorAll('.popup_size__width-range').forEach(item => {
+	item.addEventListener('input', () => {
+		let val = item.value;
+		console.log(val);
+		for (let sibling of item.parentNode.children) {
+			if (sibling.classList.contains("popup_size__width-value")) {
+				sibling.innerHTML = val + ' мм';
+			}
+		}
+	});
+})
+
+
 
 
 // tabs
@@ -262,17 +270,29 @@ const bigImgDiv = document.createElement("div"),
 	  gallery = document.querySelector(".popup_gallery");
 
 bigImgDiv.classList.add("gallery__bigimg");
-bigImgDiv.appendChild(bigImg);
-modal.appendChild(bigImgDiv);
+bigImgDiv.append(bigImg);
+modal.prepend(bigImgDiv);
 
 wrapper.addEventListener("click", (e) => {
 	e.preventDefault();
 	let target = e.target;
 
-	if(target && target.parentNode.classList.contains("gallery__img")) {
+	if(target && target.classList.contains("gallery__item") || target.parentNode.parentNode.classList.contains("gallery__item")) {
+
 		gallery.style.display = "block";
-		const path = target.parentNode.getAttribute("href");
-		bigImg.setAttribute("src", path);
+
+		if (target.classList.contains("gallery__item")) {
+			let path = "img/popup_calc/header/header_" + target.getAttribute("data-img");
+			bigImg.setAttribute("src", path);
+		} else if (target.parentNode.parentNode.classList.contains("gallery__item")){
+			let path = "img/popup_calc/header/header_" + target.parentNode.parentNode.getAttribute("data-img");
+			bigImg.setAttribute("src", path);
+		}
+		
+	}
+
+	if (target == wrapper) {
+		gallery.style.display = "none";
 	}
 	
 })

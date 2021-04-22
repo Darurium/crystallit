@@ -12,6 +12,9 @@ body {
     position: relative;
 }
 
+h1, h2, h3, h4, h5 {
+    margin-bottom: 0;
+}
 
 .container {
     width: 1190px;
@@ -46,4 +49,3 @@ body {
 @import "blocks/popupGallery";
 
 @import "blocks/media";
-// @import "blocks/detail/detail-media";
