@@ -269,7 +269,7 @@ wrapper.addEventListener("click", (e) => {
 	e.preventDefault();
 	let target = e.target;
 
-	if(target && target.parentNode.classList.contains("gallery__item")) {
+	if(target && target.parentNode.classList.contains("gallery__img")) {
 		gallery.style.display = "block";
 		const path = target.parentNode.getAttribute("href");
 		bigImg.setAttribute("src", path);
