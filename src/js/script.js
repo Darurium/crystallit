@@ -63,12 +63,10 @@ let modalState = {};
 
 const changeModalState = (state) => {
 	const cards = document.querySelectorAll(".popup_calc__card"),
-		  sill = document.querySelectorAll(".popup_size__sill");
-		//   sillWidth = document.querySelectorAll(".popup_size__width-range"),
-		//   sillLength = document.querySelectorAll(".popup_size__length-range"),
-		//   sillQuantity = document.querySelectorAll(".popup_size__quantity-range");
+		  sills = document.querySelector(".popup_size__sills");
 
-	cards.forEach(item => {
+//  Получаем цвет выбранного подоконника в калькуляторе
+	cards.forEach(item => {      
 		item.addEventListener("click", (e) => {
 			let target = e.target;
 			if (target.parentNode.classList.contains("popup_calc__img")) {
@@ -80,17 +78,22 @@ const changeModalState = (state) => {
 			console.log(state);
 		})
 	})
+// -----------------
 
 	state.sill = "";
+//  Собираем значения всех input в калькуляторе
+	document.querySelector("#popup_calc_end_btn").addEventListener("click", () => {
+		console.log(sills.children);
+		for (let i = 0; i < sills.children.length; i++) {
+			if (sills.children[i].classList.contains("popup_size__sill")) {
+				state.sill += `Подоконник:  ширина: ${sills.children[i].querySelector(".popup_size__width-range").value} 
+				длина: ${sills.children[i].querySelector(".popup_size__length-range").value} 
+				количество: ${sills.children[i].querySelector(".popup_size__quantity-range").value} шт. <br> `
+			}			
+		}
 
-	document.querySelector(".popup_size__btn").addEventListener("click", () => {
-		sill.forEach((item, i) => {
-			state.sill += `${i+1}-подоконник:  ширина: ${item.querySelector(".popup_size__width-range").value} 
-			длина: ${item.querySelector(".popup_size__length-range").value} 
-			количество: ${item.querySelector(".popup_size__quantity-range").value} шт. <br> `
-			console.log(state);
-		})
 	})	
+// ----------------
 }
 
 changeModalState(modalState);
@@ -237,19 +240,7 @@ cards.forEach(item => {
 	});
 });
 
-// inputs
 
-document.querySelectorAll('.popup_size__width-range').forEach(item => {
-	item.addEventListener('input', () => {
-		let val = item.value;
-		// console.log(val);
-		for (let sibling of item.parentNode.children) {
-			if (sibling.classList.contains("popup_size__width-value")) {
-				sibling.innerHTML = val + ' мм';
-			}
-		}
-	});
-})
 
 
 
@@ -334,10 +325,50 @@ wrapper.addEventListener("click", (e) => {
 	
 })
 
+
+//add sills
+
+const addSill = () => {
+	const sills = document.querySelector(".popup_size__sills"),
+		 
+		  sill = document.createElement("div");
+
+	sill.classList.add("popup_size__sill");
+	sill.innerHTML = `
+			<div class="popup_size__width-block">
+				<div class="popup_size__text-width">Ширина: </div>
+				<div class="popup_size__width">
+					<input type="range" class="popup_size__width-range" min="100" max="600" value="100" step="50" name="width">                            
+					<div class="popup_size__width-value">100 мм</div>                                
+				</div>
+			</div>
+			<div class="popup_size__block2">
+				<div class="popup_size__length">                            
+					<div class="popup_size__text-length">Длина: </div>
+					<div class="popup_size__length-value">                            
+						<input type="number" class="popup_size__length-range" value="1500" name="length">
+					</div>
+				</div>
+				<div class="popup_size__quantity">
+					<div class="popup_size__text-quantity">Количество: </div>
+					<div class="popup_size__quantity-value">                            
+						<input type="number" class="popup_size__quantity-range" value="1"  name="quantity">
+					</div>
+				</div>
+			</div>`
+	
+
+	sills.append(sill);
+
+}
+document.querySelector(".popup_size__plus").addEventListener("click", addSill);
+
+
 // forms
 
 const forms = (state) => {
 	const form = document.querySelectorAll('form'),
+		  textareas = document.querySelectorAll("textarea"),
 		  inputs = document.querySelectorAll("input");
 	
 	const message = {
@@ -348,6 +379,9 @@ const forms = (state) => {
 
 	const clearInputs = () => {
 		inputs.forEach(item => {
+			item.value = "";
+		})
+		textareas.forEach(item => {
 			item.value = "";
 		})
 	}
@@ -381,9 +415,28 @@ const forms = (state) => {
 				})
 				.finally(() => {
 					clearInputs();
+					setTimeout(()=> {
+						document.querySelector(".popup_calc_end__close").click();
+					}, 3000)
 				});
 		})
 	})
 }
 
-forms(modalState)
+forms(modalState);
+
+
+
+// inputs  передаем значения ширины 
+
+const sillss = document.querySelector(".popup_size__sills"),
+	  width = document.querySelectorAll(".popup_size__width-range");
+
+sillss.addEventListener("click", (e) => {
+	let target = e.target;
+	if (target.classList.contains("popup_size__width-range")) {
+		let val = target.value;
+		target.nextElementSibling.innerHTML = val + " mm";
+	}
+})
+

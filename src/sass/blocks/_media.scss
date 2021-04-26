@@ -406,6 +406,27 @@
     .gallery__bigimg {
         width: 400px;
     }
+    .popup_calc {
+        &__content {
+            width: 480px;
+        }
+        &__header {
+            width: 480px;
+        }
+        &__close {
+            top: 16px;
+            right: 16px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+    }
+    .popup_size {
+        &__close {
+            top: 17px;
+            right: 17px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -645,4 +666,87 @@
         top: 7px;
         right: 7px;
     }
+
+    .popup_calc_end {
+        .popup_calc_end__close {
+            top: 8px;
+            right: 8px;
+        }
+    }
+    .popup_calc {
+        &__content {
+            width: 300px;
+        }
+        &__header {
+            width: 300px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__item {
+            padding: 5px 10px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+        &__surface {
+            padding: 0 -20px;
+            &__block {
+                padding: 0 11px;
+            }
+        }
+        &__cards {
+            width: 300px;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        &__card {
+            width: 130px;
+            min-height: 194px;
+        }
+        &__img {
+            width: 130px;
+            height: 126px;
+        }
+
+    }
+    .popup_size {
+        &__close {
+            top: 16px;
+            right: 16px;
+        }
+        &__sill {
+            width: 280px;
+            padding: 10px 20px;
+        }
+        &__width {
+            padding: 0;
+            justify-content: space-between;
+            &-block {
+                flex-direction: column;
+            }
+            &-value {
+                margin-left: 16px;
+            }
+            &-range {
+                width: 140px;
+            }
+        }
+        &__length {
+            width: 240px;
+            justify-content: space-between;
+        }
+        &__quantity {
+            justify-content: space-between;
+            width: 240px;
+            margin-left: 0;
+        }
+        &__block2 {
+            flex-direction: column;
+        }
+        &__text-width {
+            text-align: left;
+        }
+    }
+    
 }

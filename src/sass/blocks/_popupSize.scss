@@ -79,6 +79,7 @@
     }
     &__sills {
         padding-top: 45px;
+        position: relative;
     }
     &__sill {
         margin-top: 33px;
@@ -183,5 +184,25 @@
         background: #f6f6f6;
         border-radius: 8px;
     }
+    &__plus {
+        position: absolute;
+        bottom: -45px;
+        right: -3px;
+        margin-top: 15px;
+        width: 87px;
+        height: 40px;
+        background-color: $main-color;
+        border-radius: 10px;
+        color: #FCFCFC;
+        font-weight: normal;
+        font-size: 14px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        &:focus {
+            outline: none;
+        }
+    }
+
 }
 
