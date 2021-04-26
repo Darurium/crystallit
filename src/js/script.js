@@ -59,6 +59,43 @@ $(function() {
     
 });
 
+let modalState = {};
+
+const changeModalState = (state) => {
+	const cards = document.querySelectorAll(".popup_calc__card"),
+		  sill = document.querySelectorAll(".popup_size__sill");
+		//   sillWidth = document.querySelectorAll(".popup_size__width-range"),
+		//   sillLength = document.querySelectorAll(".popup_size__length-range"),
+		//   sillQuantity = document.querySelectorAll(".popup_size__quantity-range");
+
+	cards.forEach(item => {
+		item.addEventListener("click", (e) => {
+			let target = e.target;
+			if (target.parentNode.classList.contains("popup_calc__img")) {
+				state.color = target.getAttribute("alt");
+			} else {
+				state.color = target.innerHTML;
+			}
+
+			console.log(state);
+		})
+	})
+
+	sill.forEach((item, i) => {
+		item.addEventListener("change", () => {
+			state[i] = {};
+			state[i].width = item.querySelector(".popup_size__width-range").value;
+			state[i].length = item.querySelector(".popup_size__length-range").value;
+			state[i].quantity = item.querySelector(".popup_size__quantity-range").value;
+
+			console.log(state);
+		})
+	})
+	
+}
+
+changeModalState(modalState);
+
 
 
 // Modals
@@ -101,6 +138,7 @@ const modals = (triggerSelector, modalSelector, closeSelector) => {
 modals('.header__btn', '.popup_calc', '.popup_calc__close');
 modals('.popup_calc__btn', '.popup_size', '.popup_size__close');
 modals('.gallery__wrapper', '.popup_gallery', '.popup_gallery__close');
+modals('.popup_size__btn', '.popup_calc_end', '.popup_calc_end__close');
 
 
 
@@ -205,7 +243,7 @@ cards.forEach(item => {
 document.querySelectorAll('.popup_size__width-range').forEach(item => {
 	item.addEventListener('input', () => {
 		let val = item.value;
-		console.log(val);
+		// console.log(val);
 		for (let sibling of item.parentNode.children) {
 			if (sibling.classList.contains("popup_size__width-value")) {
 				sibling.innerHTML = val + ' мм';
@@ -296,3 +334,57 @@ wrapper.addEventListener("click", (e) => {
 	}
 	
 })
+
+// forms
+
+const forms = (state) => {
+	const form = document.querySelectorAll('form'),
+		  inputs = document.querySelectorAll("input");
+	
+	const message = {
+		loading: "Загрузка...",
+		success: "Спасибо. Ваши заявка отправлена",
+		failure: "Что-то пошло не так"
+	}
+
+	const clearInputs = () => {
+		inputs.forEach(item => {
+			item.value = "";
+		})
+	}
+
+	const postData = async (url, data) => {
+		let res = await fetch(url, {
+			method: "POST",
+			body: data
+		});
+
+		return await res.text();
+	};
+
+	form.forEach(item => {
+		item.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			let statusMessage = document.createElement("div");
+			item.appendChild(statusMessage);
+
+			const formData = new FormData(item);
+			if (item.getAttribute("data-calc") === "end") {
+				for (let key in state) {
+					formData.append(key, state[key]);
+				}
+			}
+
+			postData("mailer/smart.php", formData)
+				.catch(() => {
+					console.log('Error');
+				})
+				.finally(() => {
+					clearInputs();
+				});
+		})
+	})
+}
+
+forms(modalState)

@@ -1,0 +1,46 @@
+{
+    "sills": [
+        {
+            "src": "img/popup_calc/header/header_belGl.jpg",
+            "alt": "Кристаллит белый глянец",
+            "color": "white",
+            "surface": "gl",
+            "name": "Белый глянец"
+        },
+        {
+            "src": "img/popup_calc/header/header_belMat.jpg",
+            "alt": "Кристаллит белый матовый",
+            "color": "white",
+            "surface": "mat",
+            "name": "Белый матовый"
+        },
+        {
+            "src": "img/popup_calc/header/header_vengeGl.jpg",
+            "alt": "Кристаллит Венге глянец",
+            "color": "wood",
+            "surface": "gl",
+            "name": "Венге глянец"
+        },
+        {
+            "src": "img/popup_calc/header/header_vengeMat.jpg",
+            "alt": "Кристаллит венге матовый",
+            "color": "wood",
+            "surface": "mat",
+            "name": "Венге матовый"
+        },
+        {
+            "src": "img/popup_calc/header/header_zdGL.jpg",
+            "alt": "Золотой дуб глянец",
+            "color": "wood",
+            "surface": "gl",
+            "name": "Золотой дуб глянец"
+        },
+        {
+            "src": "img/popup_calc/header/header_zdMat.jpg",
+            "alt": "Кристаллит золотой дуб матовый",
+            "color": "wood",
+            "surface": "mat",
+            "name": "Золотой дуб матовый"
+        }
+    ]
+}
