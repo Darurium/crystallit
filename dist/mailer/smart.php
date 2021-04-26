@@ -5,6 +5,7 @@ $message = $_POST['textarea'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $color = $_POST['color'];
+$sill = $_POST['sill'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -36,6 +37,7 @@ $mail->Body    = '
 	Имя: ' . $name . ' <br>
 	Номер телефона: ' . $phone . '<br>
 	Цвет подоконника: ' . $color . '<br>
+	Подоконник: <br>' . $sill . '<br>
 	Сообщение: ' . $message . '';
 
 if(!$mail->send()) {

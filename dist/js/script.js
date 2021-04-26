@@ -81,17 +81,16 @@ const changeModalState = (state) => {
 		})
 	})
 
-	sill.forEach((item, i) => {
-		item.addEventListener("change", () => {
-			state[i] = {};
-			state[i].width = item.querySelector(".popup_size__width-range").value;
-			state[i].length = item.querySelector(".popup_size__length-range").value;
-			state[i].quantity = item.querySelector(".popup_size__quantity-range").value;
+	state.sill = "";
 
+	document.querySelector(".popup_size__btn").addEventListener("click", () => {
+		sill.forEach((item, i) => {
+			state.sill += `${i+1}-подоконник:  ширина: ${item.querySelector(".popup_size__width-range").value} 
+			длина: ${item.querySelector(".popup_size__length-range").value} 
+			количество: ${item.querySelector(".popup_size__quantity-range").value} шт. <br> `
 			console.log(state);
 		})
-	})
-	
+	})	
 }
 
 changeModalState(modalState);
