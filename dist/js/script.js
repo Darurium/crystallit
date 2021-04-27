@@ -415,15 +415,18 @@ const forms = (state) => {
 				})
 				.finally(() => {
 					clearInputs();
+					
 					setTimeout(()=> {
 						document.querySelector(".popup_calc_end__close").click();
 					}, 3000)
 				});
+			
 		})
 	})
 }
 
 forms(modalState);
+
 
 
 
